@@ -1,0 +1,16 @@
+language: cpp
+
+os:
+  - linux
+  - osx
+
+compiler:
+  - clang
+  - gcc
+
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7-dev"
+
+script: echo "$TRAVIS_PYTHON_VERSION"
