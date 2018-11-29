@@ -18,4 +18,5 @@ matrix:
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
+  - python -c 'import setuptools; print(setuptools.__version__)'
   - cmake .
