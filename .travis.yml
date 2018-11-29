@@ -22,4 +22,4 @@ script:
   - echo "$LIBPATH"
   - ls "$LIBPATH"
   - export LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
-  - cmake .
+  - cmake . -DCMAKE_FIND_DEBUG_MODE=1
