@@ -2,7 +2,7 @@ language: python
 
 matrix:
   include:
-    - os: osx
+    # - os: osx
     - os: linux
       python: "3.5"
       compiler: gcc
@@ -18,3 +18,4 @@ matrix:
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
+  - cmake .
