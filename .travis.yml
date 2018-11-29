@@ -18,4 +18,5 @@ matrix:
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
+  - python -c 'from distutils import sysconfig; print(sysconfig.get_config_var("LIBDIR"))'
   - cmake .
