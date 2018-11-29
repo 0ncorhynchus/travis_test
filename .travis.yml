@@ -18,7 +18,7 @@ matrix:
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
-  - LIBPATH=$(python-config --configdir)
+  - LIBPATH=$(python -c 'from distutils import sysconfig; print(sysconfig.get_config_var("LIBDIR"))')
   - echo "$LIBPATH"
   - ls "$LIBPATH"
   - export LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
