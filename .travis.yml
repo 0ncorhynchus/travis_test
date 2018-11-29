@@ -20,6 +20,6 @@ script:
   - echo "$TRAVIS_PYTHON_VERSION"
   - LIBPATH=$(python-config --configdir)
   - echo "$LIBPATH"
-  - ls "$LIBPATH/libpython*"
+  - ls "$LIBPATH"
   - export LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
   - cmake .
