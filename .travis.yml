@@ -18,8 +18,8 @@ matrix:
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
-  - LIBPATH=$(python -c 'from distutils import sysconfig; print(sysconfig.get_config_var("LIBDIR"))')
+  - LIBPATH=$(which python | dirname | dirname)
   - echo "$LIBPATH"
   - ls "$LIBPATH"
   - export LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
-  - cmake . -DCMAKE_FIND_DEBUG_MODE=1
+  - cmake .
