@@ -18,7 +18,7 @@ matrix:
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
-  - LIBPATH=$(dirname $(dirname $(which python)))
+  - LIBPATH=$(dirname $(dirname $(which python)))/lib
   - echo "$LIBPATH"
   - ls "$LIBPATH"
   - export LD_LIBRARY_PATH=$LIBPATH:$LD_LIBRARY_PATH
