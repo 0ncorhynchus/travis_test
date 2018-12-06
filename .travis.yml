@@ -1,23 +1,30 @@
-language: python
+language: cpp
 
 matrix:
   include:
-    # - os: osx
+    - os: osx
     - os: linux
-      python: "3.5"
       compiler: gcc
-    - os: linux
+      language: python
       python: "3.5"
-      compiler: clang
     - os: linux
+      compiler: clang
+      language: python
+      python: "3.5"
+    - os: linux
+      compiler: clang
+      language: python
       python: "3.6"
-      compiler: clang
     - os: linux
-      python: "3.7-dev"
       compiler: clang
+      language: python
+      python: "3.7-dev"
 
 script:
   - echo "$TRAVIS_PYTHON_VERSION"
   - pip install -U setuptools
   - python -c 'import setuptools; print(setuptools.__version__)'
   - cmake .
+  - mkdir tmp
+  - pushd tmp
+  - popd
